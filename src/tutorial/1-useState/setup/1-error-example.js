@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useState } from "react";
 
 const ErrorExample = () => {
-  return <h2>useState error example</h2>;
+	let title = "random title";
+
+	const clickHandler = () => {
+		console.log(title);
+	};
+
+	return (
+		<React.Fragment>
+			<h2>{title}</h2>
+			<button type="button" className="btn" onClick={clickHandler}>
+				Change title
+			</button>
+		</React.Fragment>
+	);
 };
 
 export default ErrorExample;
